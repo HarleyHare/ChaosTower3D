@@ -1,0 +1,49 @@
+# ---- Unity : dossiers générés automatiquement (ne jamais versionner) ----
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Fichiers .meta des dossiers ignorés
+/[Aa]ssets/AssetStoreTools*
+
+# ---- Fichiers générés par Visual Studio / VS Code / Rider ----
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+ExportedObj/
+.consulo/
+
+# ---- Fichiers de crash et de debug ----
+crashlytics-buildid.txt
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+mono_crash.*
+
+# ---- Système ----
+.DS_Store
+Thumbs.db
+Desktop.ini
