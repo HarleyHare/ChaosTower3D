@@ -3,7 +3,7 @@
 // Autrice : SD — créé le 03/11/2026
 // Rôle : déplacement FPS du joueur (marche, course, rotation
 //        horizontale uniquement) et réglage du champ de vision
-// Modifs :
+// Modifs : 03/11/2026 SD — reste droit, se pose sur le sol au démarrage
 // ------------------------------------------------------------
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -71,6 +71,12 @@ namespace ChaosTower.Player
             Cursor.visible = true;
         }
 
+        private void Start()
+        {
+            KeepUpright();
+            SnapToGround();
+        }
+
         private void Update()
         {
             UpdateFov();
@@ -91,7 +97,26 @@ namespace ChaosTower.Player
                 ? lookX * mouseSensitivity
                 : lookX * gamepadTurnSpeed * Time.deltaTime;
 
-            transform.Rotate(0f, yaw, 0f);
+            transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y + yaw, 0f);
+        }
+
+        // Le joueur ne penche jamais : seule la rotation autour de l'axe vertical est gardée
+        private void KeepUpright()
+        {
+            transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
+        }
+
+        // Au démarrage, pose le joueur sur le sol juste en dessous de lui
+        // (évite de traverser le sol s'il a été placé pile au niveau ou un peu dedans)
+        private void SnapToGround()
+        {
+            // Le CharacterController est désactivé : le rayon ne le touche pas, et on peut
+            // déplacer le joueur à la main. Départ à 1 m : sous le plafond (3 m) des étages.
+            _controller.enabled = false;
+            Vector3 from = transform.position + Vector3.up * 1f;
+            if (Physics.Raycast(from, Vector3.down, out RaycastHit hit, 10f, ~0, QueryTriggerInteraction.Ignore))
+                transform.position = hit.point + Vector3.up * 0.05f;
+            _controller.enabled = true;
         }
 
         private void Move()
