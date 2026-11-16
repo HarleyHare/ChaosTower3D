@@ -5,6 +5,7 @@
 //        construit Sandbox_Sonja (sol, murs, joueur, armes, cibles)
 //        pour tester le déplacement et le tir sans attendre les maps.
 // Modifs : 03/11/2026 SD — sol en bloc épais, joueur posé à 0,1 m
+//          16/11/2026 SD — ajoute PlayerHealth et ses touches de test
 // ------------------------------------------------------------
 using ChaosTower.Player;
 using ChaosTower.Weapons;
@@ -239,6 +240,10 @@ namespace ChaosTower.EditorTools
             unlocked.arraySize = 3;
             for (int i = 0; i < 3; i++) unlocked.GetArrayElementAtIndex(i).boolValue = true;
             so.ApplyModifiedPropertiesWithoutUndo();
+
+            // Santé + touches de test (K, L, R, I)
+            player.AddComponent<PlayerHealth>();
+            player.AddComponent<PlayerHealthDebug>();
 
             // Affichage de test
             var hud = player.AddComponent<DebugHUD>();
