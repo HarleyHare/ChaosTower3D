@@ -6,8 +6,10 @@
 //        pour tester le déplacement et le tir sans attendre les maps.
 // Modifs : 03/11/2026 SD — sol en bloc épais, joueur posé à 0,1 m
 //          16/11/2026 SD — ajoute PlayerHealth et ses touches de test
+//          16/11/2026 SD — ajoute la potion (+ menu pour une scène existante)
 // ------------------------------------------------------------
 using ChaosTower.Player;
+using ChaosTower.Powers;
 using ChaosTower.Weapons;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -21,6 +23,7 @@ namespace ChaosTower.EditorTools
         private const string ScenePath = "Assets/_Project/Scenes/Sandbox/Sandbox_Sonja.unity";
         private const string ControlsPath = "Assets/_Project/Data/ChaosTowerControls.inputactions";
         private const string WeaponDataFolder = "Assets/_Project/Data/Weapons";
+        private const string PowerDataFolder = "Assets/_Project/Data/Powers";
         private const string MaterialFolder = "Assets/_Project/Art/Materials";
         private const float Cell = 2f;      // une case = 2 m (TDD)
         private const float WallHeight = 3f;
@@ -245,10 +248,65 @@ namespace ChaosTower.EditorTools
             player.AddComponent<PlayerHealth>();
             player.AddComponent<PlayerHealthDebug>();
 
+            // Pouvoir : la potion de l'étage 2, pour pouvoir la tester
+            AddPotion(player);
+
             // Affichage de test
             var hud = player.AddComponent<DebugHUD>();
             Set(hud, "inventory", inventory);
             Set(hud, "weapons", manager);
+        }
+
+        [MenuItem("ChaosTower/Ajouter la potion au joueur de la scène ouverte")]
+        public static void AddPotionToOpenScene()
+        {
+            var player = GameObject.FindWithTag("Player");
+            if (player == null)
+            {
+                EditorUtility.DisplayDialog("Joueur introuvable", "Aucun objet avec le tag « Player » dans la scène ouverte.", "OK");
+                return;
+            }
+            if (player.GetComponent<PowerManager>() != null)
+            {
+                EditorUtility.DisplayDialog("Déjà présent", "Le joueur a déjà un PowerManager.", "OK");
+                return;
+            }
+
+            AddPotion(player);
+            EditorSceneManager.MarkSceneDirty(player.scene);
+            Debug.Log("[Sandbox] Potion ajoutée au joueur. Enregistre la scène (Ctrl + S) puis Play : clic droit pour lancer.");
+        }
+
+        private static void AddPotion(GameObject player)
+        {
+            var controls = AssetDatabase.LoadAssetAtPath<InputActionAsset>(ControlsPath);
+            var cam = player.GetComponentInChildren<Camera>();
+
+            var potion = player.AddComponent<PotionPower>();
+            var so = new SerializedObject(potion);
+            so.FindProperty("data").objectReferenceValue = GetOrCreatePowerData("PD_EP2_Potion");
+            so.FindProperty("aimOrigin").objectReferenceValue = cam != null ? cam.transform : null;
+            so.FindProperty("audioSource").objectReferenceValue = player.GetComponent<AudioSource>();
+            so.ApplyModifiedPropertiesWithoutUndo();
+
+            var manager = player.AddComponent<PowerManager>();
+            Set(manager, "controls", controls);
+            Set(manager, "activePower", potion);
+        }
+
+        private static PowerData GetOrCreatePowerData(string fileName)
+        {
+            if (!AssetDatabase.IsValidFolder(PowerDataFolder))
+                AssetDatabase.CreateFolder("Assets/_Project/Data", "Powers");
+
+            string path = $"{PowerDataFolder}/{fileName}.asset";
+            var existing = AssetDatabase.LoadAssetAtPath<PowerData>(path);
+            if (existing != null) return existing; // on ne touche pas aux réglages déjà faits
+
+            // Les valeurs par défaut de PowerData sont celles du TDD (5 charges, 60 s, 10 m, 4 m, 60 dégâts)
+            var data = ScriptableObject.CreateInstance<PowerData>();
+            AssetDatabase.CreateAsset(data, path);
+            return data;
         }
 
         private static Weapon CreateWeapon<T>(GameObject holder, string name, WeaponData data,

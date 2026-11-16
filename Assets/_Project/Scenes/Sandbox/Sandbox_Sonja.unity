@@ -2986,6 +2986,8 @@ GameObject:
   - component: {fileID: 1054176526}
   - component: {fileID: 1054176534}
   - component: {fileID: 1054176533}
+  - component: {fileID: 1054176536}
+  - component: {fileID: 1054176535}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3008,6 +3010,7 @@ MonoBehaviour:
   inventory: {fileID: 1054176528}
   weapons: {fileID: 1054176527}
   health: {fileID: 0}
+  powers: {fileID: 0}
 --- !u!114 &1054176527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3229,6 +3232,37 @@ MonoBehaviour:
   damageMultiplier: 1
   disableOnDeath: []
   invincible: 0
+--- !u!114 &1054176535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054176525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac254304c9aaa8499da306150b4c6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChaosTower.Powers.PowerManager
+  controls: {fileID: -944628639613478452, guid: 9954bbb56c7662244891956811f6a5d3, type: 3}
+  activePower: {fileID: 1054176536}
+--- !u!114 &1054176536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054176525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996392dc8c248bb4db19a4b544625d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChaosTower.Powers.PotionPower
+  data: {fileID: 11400000, guid: d1527864e8da335468e0a6278ee966d8, type: 2}
+  aimOrigin: {fileID: 1510100785}
+  audioSource: {fileID: 1054176530}
+  spawnOffset: {x: 0.2, y: -0.25, z: 0.6}
+  placeholderSize: 0.2
 --- !u!1 &1100513697
 GameObject:
   m_ObjectHideFlags: 0

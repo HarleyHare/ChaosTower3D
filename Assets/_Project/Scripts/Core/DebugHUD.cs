@@ -4,8 +4,10 @@
 // Rôle : affichage TEMPORAIRE pour les tests (viseur, munitions,
 //        arme en main). Sera remplacé par le vrai HUD de Mila.
 // Modifs : 16/11/2026 SD — affiche les PV, l'invincibilité et la mort
+//          16/11/2026 SD — affiche la jauge de pouvoir
 // ------------------------------------------------------------
 using ChaosTower.Player;
+using ChaosTower.Powers;
 using ChaosTower.Weapons;
 using UnityEngine;
 
@@ -17,12 +19,15 @@ namespace ChaosTower
         [SerializeField] private WeaponManager weapons;
         [Tooltip("Trouvée automatiquement sur le joueur si vide")]
         [SerializeField] private PlayerHealth health;
+        [Tooltip("Trouvé automatiquement sur le joueur si vide")]
+        [SerializeField] private PowerManager powers;
 
         private GUIStyle _style;
 
         private void Awake()
         {
             if (health == null) health = GetComponent<PlayerHealth>();
+            if (powers == null) powers = GetComponent<PowerManager>();
         }
 
         private void OnGUI()
@@ -41,6 +46,13 @@ namespace ChaosTower
             string weaponName = weapons != null && weapons.CurrentWeapon != null && weapons.CurrentWeapon.Data != null
                 ? weapons.CurrentWeapon.Data.DisplayName : "-";
             string ammo = inventory != null ? inventory.Ammo.ToString() : "-";
+            if (powers != null && powers.ActivePower != null && powers.ActivePower.Data != null)
+            {
+                string next = powers.Charges < powers.MaxCharges ? $"   (+1 dans {Mathf.CeilToInt(powers.TimeToNextCharge)} s)" : "";
+                GUI.Label(new Rect(20, Screen.height - 160, 900, 30),
+                    $"Pouvoir : {powers.ActivePower.Data.DisplayName}   Charges : {powers.Charges}/{powers.MaxCharges}{next}   (clic droit)", _style);
+            }
+
             if (health != null)
             {
                 string pv = $"PV : {Mathf.CeilToInt(health.Health)} / {health.MaxHealth:0}";

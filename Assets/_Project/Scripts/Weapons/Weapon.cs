@@ -3,7 +3,7 @@
 // Autrice : SD — créé le 03/11/2026
 // Rôle : classe de base des armes : cadence, munitions, son,
 //        bruit qui alerte les ennemis. Seule Fire() change.
-// Modifs :
+// Modifs : 16/11/2026 SD — MakeNoise() public, utilisé par la potion
 // ------------------------------------------------------------
 using System;
 using ChaosTower.Player;
@@ -18,6 +18,9 @@ namespace ChaosTower.Weapons
         /// À déplacer dans GameEvents (OnNoise) quand il existera.
         /// </summary>
         public static event Action<Vector3, float> NoiseMade;
+
+        /// <summary>Signale un bruit aux ennemis (tir, explosion de potion…).</summary>
+        public static void MakeNoise(Vector3 position, float radius) => NoiseMade?.Invoke(position, radius);
 
         [Header("Réglages")]
         [SerializeField] protected WeaponData data;
@@ -74,7 +77,7 @@ namespace ChaosTower.Weapons
             _nextFireTime = Time.time + data.FireInterval;
             Fire();
             PlayFeedback();
-            if (data.NoiseRadius > 0f) NoiseMade?.Invoke(aimOrigin.position, data.NoiseRadius);
+            if (data.NoiseRadius > 0f) MakeNoise(aimOrigin.position, data.NoiseRadius);
             Fired?.Invoke();
             return true;
         }
