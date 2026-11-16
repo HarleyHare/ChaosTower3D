@@ -2984,6 +2984,8 @@ GameObject:
   - component: {fileID: 1054176528}
   - component: {fileID: 1054176527}
   - component: {fileID: 1054176526}
+  - component: {fileID: 1054176534}
+  - component: {fileID: 1054176533}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3005,6 +3007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChaosTower.DebugHUD
   inventory: {fileID: 1054176528}
   weapons: {fileID: 1054176527}
+  health: {fileID: 0}
 --- !u!114 &1054176527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3195,6 +3198,37 @@ Transform:
   - {fileID: 1510100785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054176533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054176525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e4665dcdc66624987bc008eb398306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChaosTower.Player.PlayerHealthDebug
+  damagePerPress: 10
+  healPerPress: 25
+--- !u!114 &1054176534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054176525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302c75ef844faf54e8984f273bc9abfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChaosTower.Player.PlayerHealth
+  maxHealth: 100
+  criticalThreshold: 0.2
+  damageMultiplier: 1
+  disableOnDeath: []
+  invincible: 0
 --- !u!1 &1100513697
 GameObject:
   m_ObjectHideFlags: 0
