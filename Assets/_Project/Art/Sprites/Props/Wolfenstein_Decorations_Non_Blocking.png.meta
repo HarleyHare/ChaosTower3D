@@ -1,12 +1,15 @@
 fileFormatVersion: 2
 guid: 7d7c2615a3286bd488ede58bf40f5546
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1032999231649713675
+    second: Wolfenstein_Decorations_Non_Blocking_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,26 +40,26 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationMethod: 0
   spriteTessellationDetail: -1
   spriteGeometrySubdivision: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -110,12 +113,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 196
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f174400cac0aa1f0800000000000000
+      internalID: -1032999231649713675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 196
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3faa373d6ff27b42a7dd69151874a08
+      internalID: -1830610559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 196
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e59acde72c9bd4088e53abcbb00d85
+      internalID: 1011624988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 196
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cc3e830bab50542be4f1ef4a4411ed
+      internalID: -739084635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c85232ba03c4834f92cdc3a8ea6b9a2
+      internalID: 1542945105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acba98d8e28c9294b82474b180e69bbd
+      internalID: -2037010941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a314817770a3446b93cbd152d28a5a
+      internalID: 295512104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a13d7c8f5d23f4ebcf67b91bb498c0
+      internalID: -1972434358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a62b2aecf138a6468a1cd32df63face
+      internalID: -476565665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_9
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d51132f966249478c3e70cead1b362
+      internalID: 1784136352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8a8cd591468fa47860cf08cc956a51
+      internalID: 1502192109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423ecbd3520a35848b14be0b006beb58
+      internalID: 1250774977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65317576dbb585c479b28f29ecbe9af7
+      internalID: 1677943966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef274d296e73d242869dc9c2b744014
+      internalID: -2042995068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab78848270e07149baed91b5b522fbe
+      internalID: -645810501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Decorations_Non_Blocking_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa1e590f4fecee41bf3a9668c7ad725
+      internalID: -1928754966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a954812e9ec76af4e81cc548fae30d75
     internalID: 0
     vertices: []
     indices: 
@@ -123,8 +478,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":65.0,"y":65.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":true,"isAlternate":false}'
+    nameFileIdTable:
+      Wolfenstein_Decorations_Non_Blocking_0: -1032999231649713675
+      Wolfenstein_Decorations_Non_Blocking_1: -1830610559
+      Wolfenstein_Decorations_Non_Blocking_10: 1502192109
+      Wolfenstein_Decorations_Non_Blocking_11: 1250774977
+      Wolfenstein_Decorations_Non_Blocking_12: 1677943966
+      Wolfenstein_Decorations_Non_Blocking_13: -2042995068
+      Wolfenstein_Decorations_Non_Blocking_14: -645810501
+      Wolfenstein_Decorations_Non_Blocking_15: -1928754966
+      Wolfenstein_Decorations_Non_Blocking_2: 1011624988
+      Wolfenstein_Decorations_Non_Blocking_3: -739084635
+      Wolfenstein_Decorations_Non_Blocking_4: 1542945105
+      Wolfenstein_Decorations_Non_Blocking_5: -2037010941
+      Wolfenstein_Decorations_Non_Blocking_6: 295512104
+      Wolfenstein_Decorations_Non_Blocking_7: -1972434358
+      Wolfenstein_Decorations_Non_Blocking_8: -476565665
+      Wolfenstein_Decorations_Non_Blocking_9: 1784136352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

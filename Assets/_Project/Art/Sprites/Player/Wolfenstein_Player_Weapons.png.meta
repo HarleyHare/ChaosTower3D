@@ -1,12 +1,15 @@
 fileFormatVersion: 2
 guid: 4e89907582789354dbdf5594083d9e7c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6315100181400370658
+    second: Wolfenstein_Player_Weapons_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,29 +37,29 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationMethod: 0
   spriteTessellationDetail: -1
   spriteGeometrySubdivision: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -74,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,12 +113,342 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edbf59f72eb3a750800000000000000
+      internalID: 6315100181400370658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda7468c54c73e047ae305f6437fef6e
+      internalID: -944014540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643342e343e3d5045a412b3fad491385
+      internalID: 492602033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5352e06c18584c34dac19b5b207cf596
+      internalID: -689439429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 131
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c361ffef3266bb489e3cd9b60279b5a
+      internalID: -950782362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede689ccbc19a8f4da9bd026e46261a8
+      internalID: 357092474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dffd2b2087761488c5854a596763a5
+      internalID: -1838181735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_7
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c71b3b23a745343be85c0e2d755f9c
+      internalID: 1907740687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1fb9e7f37aa2448b30cd9ab9b54404
+      internalID: 469305225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_9
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 66
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e950c14873d75804fbde57fa036fb8a5
+      internalID: 279152490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c897124bc569141a68ab21a9319ed1
+      internalID: -1292546586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7179b0a240fde4592a7f7851e0acbe
+      internalID: -160068609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_12
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33f6c387ec90584fbc17a4b6ea2142c
+      internalID: 1423829309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_13
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ead2dd6cdb4dd42a3442877c984e66
+      internalID: 1720719409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolfenstein_Player_Weapons_14
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fb35166223cd34aaaf217fe2c6ad5e
+      internalID: -1276022905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d61cca8c1822149419e6f28e4442cba9
     internalID: 0
     vertices: []
     indices: 
@@ -123,8 +456,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":65.0,"y":65.0},"gridSpriteOffset":{"x":1.0,"y":1.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":true,"isAlternate":false}'
+    nameFileIdTable:
+      Wolfenstein_Player_Weapons_0: 6315100181400370658
+      Wolfenstein_Player_Weapons_1: -944014540
+      Wolfenstein_Player_Weapons_10: -1292546586
+      Wolfenstein_Player_Weapons_11: -160068609
+      Wolfenstein_Player_Weapons_12: 1423829309
+      Wolfenstein_Player_Weapons_13: 1720719409
+      Wolfenstein_Player_Weapons_14: -1276022905
+      Wolfenstein_Player_Weapons_2: 492602033
+      Wolfenstein_Player_Weapons_3: -689439429
+      Wolfenstein_Player_Weapons_4: -950782362
+      Wolfenstein_Player_Weapons_5: 357092474
+      Wolfenstein_Player_Weapons_6: -1838181735
+      Wolfenstein_Player_Weapons_7: 1907740687
+      Wolfenstein_Player_Weapons_8: 469305225
+      Wolfenstein_Player_Weapons_9: 279152490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
