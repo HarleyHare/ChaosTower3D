@@ -1,0 +1,720 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab5d05ce618e0f4ab62b693604801d3, type: 3}
+  m_Name: MapPalette_EP1
+  m_EditorClassIdentifier: Assembly-CSharp::ChaosTower.Level.MapPalette
+  entries:
+  - label: Mur
+    color:
+      serializedVersion: 2
+      rgba: 4279703319
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: c50324d26ad59594cba7a0d7c6586a70, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Mur pierre bleue
+    color:
+      serializedVersion: 2
+      rgba: 4283704599
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 76c59b9e28a908b41b721c011cdef126, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Mur bois
+    color:
+      serializedVersion: 2
+      rgba: 4278591554
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 72bc7e85d8355bd4598fb88eec03a09e, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "Mur m\xE9tal"
+    color:
+      serializedVersion: 2
+      rgba: 4283777331
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 3088860128e62e045869ae4103acabaf, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "Mur \xE9toil\xE9e"
+    color:
+      serializedVersion: 2
+      rgba: 4292258185
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: e0955b248295a704a866e35cf9d9940f, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Mur griffon
+    color:
+      serializedVersion: 2
+      rgba: 4280686091
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 6d16f7e28d206424c97a6c4b8a7bd793, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Mur pierre moussue
+    color:
+      serializedVersion: 2
+      rgba: 4279522102
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 70de336bbaa317d4d9956c1ff5e4ae3b, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Mur brique rouge
+    color:
+      serializedVersion: 2
+      rgba: 4280098175
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 506c730961844894a98ac3d99d98af8f, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "Pierre + banni\xE8re rouge"
+    color:
+      serializedVersion: 2
+      rgba: 4279829836
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 1966f0baf2e6026479ec26626b41e106, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Pierre + tableau soldats
+    color:
+      serializedVersion: 2
+      rgba: 4282067230
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 10dd61d45284e73418008752bf3f2186, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Pierre + panneau Attention
+    color:
+      serializedVersion: 2
+      rgba: 4282793791
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 53e2b1fdde2102647ae26d636da13740, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Pierre bleue + cellule
+    color:
+      serializedVersion: 2
+      rgba: 4289675294
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: b71b4ac5b9d43f24197af2928d03b166, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Pierre bleue + cellule squelette
+    color:
+      serializedVersion: 2
+      rgba: 4288884791
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: d007351127419e34fb9c8572efc8d62a, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "Bois + tableau cr\xE2ne"
+    color:
+      serializedVersion: 2
+      rgba: 4279385969
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 558f6ab7e261d31458c6f80a8cf70f21, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Bois + portrait
+    color:
+      serializedVersion: 2
+      rgba: 4279127429
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 6b9e94601a4b83e4d9450f5404992aca, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "M\xE9tal + panneau Attention"
+    color:
+      serializedVersion: 2
+      rgba: 4285093191
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 69eeb3a8fbfb641498d90b2249d71001, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Sol
+    color:
+      serializedVersion: 2
+      rgba: 4294967295
+    kind: 1
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Porte
+    color:
+      serializedVersion: 2
+      rgba: 4294399400
+    kind: 2
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 763be9f27f643a84d8047f13de319582, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "Porte verrouill\xE9e"
+    color:
+      serializedVersion: 2
+      rgba: 4292990411
+    kind: 3
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "Cl\xE9"
+    color:
+      serializedVersion: 2
+      rgba: 4290290580
+    kind: 5
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -79734461, guid: 537127bac24b834438e325f642eb020e, type: 3}
+    spriteHeight: 0
+  - label: Mur secret
+    color:
+      serializedVersion: 2
+      rgba: 4278252287
+    kind: 4
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: "D\xE9part"
+    color:
+      serializedVersion: 2
+      rgba: 4279511644
+    kind: 6
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Sortie
+    color:
+      serializedVersion: 2
+      rgba: 4281028774
+    kind: 2
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: cf451613c8597c547ae8b3fda6b7415f, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Sortie optionnelle
+    color:
+      serializedVersion: 2
+      rgba: 4282611176
+    kind: 8
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Animal (rapide)
+    color:
+      serializedVersion: 2
+      rgba: 4284593663
+    kind: 9
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Ennemi de base
+    color:
+      serializedVersion: 2
+      rgba: 4281244415
+    kind: 9
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Boss
+    color:
+      serializedVersion: 2
+      rgba: 4278222591
+    kind: 9
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Trajet de patrouille
+    color:
+      serializedVersion: 2
+      rgba: 4293841698
+    kind: 10
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Croix
+    color:
+      serializedVersion: 2
+      rgba: 4293447675
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 9060412142548726234, guid: b3a9e334de10d674396a0f66c05b0bfb, type: 3}
+    spriteHeight: 0
+  - label: Calice
+    color:
+      serializedVersion: 2
+      rgba: 4292126969
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -525374562, guid: b3a9e334de10d674396a0f66c05b0bfb, type: 3}
+    spriteHeight: 0
+  - label: Coffre
+    color:
+      serializedVersion: 2
+      rgba: 4288235756
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1095470174, guid: b3a9e334de10d674396a0f66c05b0bfb, type: 3}
+    spriteHeight: 0
+  - label: Couronne
+    color:
+      serializedVersion: 2
+      rgba: 4284291262
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1255948410, guid: b3a9e334de10d674396a0f66c05b0bfb, type: 3}
+    spriteHeight: 0
+  - label: Gamelle
+    color:
+      serializedVersion: 2
+      rgba: 4288543193
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 5899707520498051879, guid: f97d827c6becd074292c7f2cfe137892, type: 3}
+    spriteHeight: 0
+  - label: Assiette
+    color:
+      serializedVersion: 2
+      rgba: 4281722531
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 2011335894, guid: f97d827c6becd074292c7f2cfe137892, type: 3}
+    spriteHeight: 0
+  - label: Trousse de soin
+    color:
+      serializedVersion: 2
+      rgba: 4279083877
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 925411012, guid: f97d827c6becd074292c7f2cfe137892, type: 3}
+    spriteHeight: 0
+  - label: Sang
+    color:
+      serializedVersion: 2
+      rgba: 4290706150
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -476565665, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Arme rapide
+    color:
+      serializedVersion: 2
+      rgba: 4294821267
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 895776092, guid: 3fd0420f2dbce9444a23749c478d914a, type: 3}
+    spriteHeight: 0
+  - label: Chargeur
+    color:
+      serializedVersion: 2
+      rgba: 4292365853
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 5516166701031053861, guid: 3fd0420f2dbce9444a23749c478d914a, type: 3}
+    spriteHeight: 0
+  - label: "Sph\xE8re 1-UP"
+    color:
+      serializedVersion: 2
+      rgba: 4281335961
+    kind: 11
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -1562378089, guid: 537127bac24b834438e325f642eb020e, type: 3}
+    spriteHeight: 0
+  - label: Tonneau vert (bidon)
+    color:
+      serializedVersion: 2
+      rgba: 4291940858
+    kind: 12
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 0}
+    sprite: {fileID: -7252381694338077205, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Table avec chaises
+    color:
+      serializedVersion: 2
+      rgba: 4290756600
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -1718553186, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Lampe sur pied
+    color:
+      serializedVersion: 2
+      rgba: 4289572342
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1879267539, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Squelette pendu
+    color:
+      serializedVersion: 2
+      rgba: 4288388084
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1759388134, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Pilier
+    color:
+      serializedVersion: 2
+      rgba: 4287269618
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 678477522, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Plante en pot (arbre)
+    color:
+      serializedVersion: 2
+      rgba: 4286085360
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 446539294, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Lavabo
+    color:
+      serializedVersion: 2
+      rgba: 4284901102
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 378723135, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: "Plante s\xE9ch\xE9e (vase bleu)"
+    color:
+      serializedVersion: 2
+      rgba: 4283716844
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1732638428, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Vase bleu
+    color:
+      serializedVersion: 2
+      rgba: 4282532586
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1669932950, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Table ronde
+    color:
+      serializedVersion: 2
+      rgba: 4281348328
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 26076200, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Armure
+    color:
+      serializedVersion: 2
+      rgba: 4280164070
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -20011150, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Cage vide
+    color:
+      serializedVersion: 2
+      rgba: 4279769304
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1237982, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Cage avec squelette
+    color:
+      serializedVersion: 2
+      rgba: 4279637703
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1361715654, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Lit
+    color:
+      serializedVersion: 2
+      rgba: 4279506101
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -1561928550, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Tonneau en bois
+    color:
+      serializedVersion: 2
+      rgba: 4279374499
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1881589815, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Puits avec eau
+    color:
+      serializedVersion: 2
+      rgba: 4279242897
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1370649475, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Puits vide
+    color:
+      serializedVersion: 2
+      rgba: 4279111295
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -472930031, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Drapeau
+    color:
+      serializedVersion: 2
+      rgba: 4278979693
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1438632997, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: "Po\xEAle"
+    color:
+      serializedVersion: 2
+      rgba: 4278848091
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -588130192, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: "R\xE2telier de lances"
+    color:
+      serializedVersion: 2
+      rgba: 4278716489
+    kind: 12
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 555741906, guid: 994b4bb7a0b43e140b50358429d52c01, type: 3}
+    spriteHeight: 0
+  - label: Flaque d'eau
+    color:
+      serializedVersion: 2
+      rgba: 4293981899
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -1032999231649713675, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Lustre
+    color:
+      serializedVersion: 2
+      rgba: 4293587636
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -1830610559, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Squelette allong\xE9"
+    color:
+      serializedVersion: 2
+      rgba: 4292273775
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1011624988, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Lampe de plafond
+    color:
+      serializedVersion: 2
+      rgba: 4293127837
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -739084635, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Ustensiles suspendus
+    color:
+      serializedVersion: 2
+      rgba: 4292668038
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1542945105, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Tas de cr\xE2nes"
+    color:
+      serializedVersion: 2
+      rgba: 4291813976
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -2037010941, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Panier
+    color:
+      serializedVersion: 2
+      rgba: 4291419713
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 295512104, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Os et sang
+    color:
+      serializedVersion: 2
+      rgba: 4290959915
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -1972434358, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Flaque de sang
+    color:
+      serializedVersion: 2
+      rgba: 4289775139
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -476565665, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Os \xE9pars 1"
+    color:
+      serializedVersion: 2
+      rgba: 4288458527
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1784136352, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Os \xE9pars 2"
+    color:
+      serializedVersion: 2
+      rgba: 4287141915
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1502192109, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Os \xE9pars 3"
+    color:
+      serializedVersion: 2
+      rgba: 4285759767
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1250774977, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Os \xE9pars 4"
+    color:
+      serializedVersion: 2
+      rgba: 4284443411
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: 1677943966, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Casseroles suspendues
+    color:
+      serializedVersion: 2
+      rgba: 4283061263
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -2042995068, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: Lianes
+    color:
+      serializedVersion: 2
+      rgba: 4281744651
+    kind: 13
+    prefab: {fileID: 0}
+    materials: []
+    sprite: {fileID: -645810501, guid: 7d7c2615a3286bd488ede58bf40f5546, type: 3}
+    spriteHeight: 0
+  - label: "Mur final biblioth\xE8que"
+    color:
+      serializedVersion: 2
+      rgba: 4283893038
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 63a07fc1cc3616b4391abc6e9437dedd, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
+  - label: Mur final violet
+    color:
+      serializedVersion: 2
+      rgba: 4281533211
+    kind: 0
+    prefab: {fileID: 0}
+    materials:
+    - {fileID: 2100000, guid: 9327df21fbaccd3439b7ebc6e1eaa501, type: 2}
+    sprite: {fileID: 0}
+    spriteHeight: 0
