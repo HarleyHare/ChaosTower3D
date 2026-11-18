@@ -4,7 +4,7 @@
 // Rôle : cible de test pour les armes (remplacée plus tard par
 //        les vrais ennemis d'Emma). Rougit quand on la touche,
 //        disparaît à 0 PV, peut réapparaître.
-// Modifs :
+// Modifs : 18/11/2026 SD — sons de blessure et de mort (3D)
 // ------------------------------------------------------------
 using UnityEngine;
 
@@ -17,11 +17,18 @@ namespace ChaosTower.Weapons
         [Tooltip("Réapparaît après ce délai (0 = jamais)")]
         [Range(0f, 10f)] [SerializeField] private float respawnDelay = 2f;
 
+        [Header("Sons (3D)")]
+        [Tooltip("Un son est choisi au hasard à chaque blessure")]
+        [SerializeField] private AudioClip[] hurtSounds;
+        [Tooltip("Un son est choisi au hasard à chaque mort")]
+        [SerializeField] private AudioClip[] deathSounds;
+
         private float _health;
         private Renderer _renderer;
         private Collider _collider;
         private MaterialPropertyBlock _block;
         private float _flashUntil;
+        private AudioSource _audio;
 
         private void Awake()
         {
@@ -29,6 +36,15 @@ namespace ChaosTower.Weapons
             _collider = GetComponent<Collider>();
             _block = new MaterialPropertyBlock();
             _health = maxHealth;
+
+            // Son 3D réglé comme les ennemis du TDD : atténuation linéaire de 2 à 30 m
+            _audio = GetComponent<AudioSource>();
+            if (_audio == null) _audio = gameObject.AddComponent<AudioSource>();
+            _audio.playOnAwake = false;
+            _audio.spatialBlend = 1f;
+            _audio.rolloffMode = AudioRolloffMode.Linear;
+            _audio.minDistance = 2f;
+            _audio.maxDistance = 30f;
         }
 
         public void TakeDamage(float amount, Vector3 from)
@@ -41,6 +57,7 @@ namespace ChaosTower.Weapons
             SetColor(Color.red);
 
             if (_health <= 0f) Die();
+            else PlayRandom(hurtSounds);
         }
 
         private void Update()
@@ -55,6 +72,7 @@ namespace ChaosTower.Weapons
         private void Die()
         {
             Debug.Log($"{name} est mort");
+            PlayRandom(deathSounds);
             SetVisible(false);
             if (respawnDelay > 0f) Invoke(nameof(Respawn), respawnDelay);
         }
@@ -64,6 +82,15 @@ namespace ChaosTower.Weapons
             _health = maxHealth;
             SetColor(Color.white);
             SetVisible(true);
+        }
+
+        private void PlayRandom(AudioClip[] clips)
+        {
+            if (clips == null || clips.Length == 0) return;
+            AudioClip clip = clips[Random.Range(0, clips.Length)];
+            if (clip == null) return;
+            _audio.pitch = Random.Range(0.95f, 1.05f);
+            _audio.PlayOneShot(clip);
         }
 
         private void SetVisible(bool visible)

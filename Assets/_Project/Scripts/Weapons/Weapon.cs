@@ -4,6 +4,7 @@
 // Rôle : classe de base des armes : cadence, munitions, son,
 //        bruit qui alerte les ennemis. Seule Fire() change.
 // Modifs : 16/11/2026 SD — MakeNoise() public, utilisé par la potion
+//          18/11/2026 SD — son d'arme vide, sons d'impact
 // ------------------------------------------------------------
 using System;
 using ChaosTower.Player;
@@ -72,7 +73,12 @@ namespace ChaosTower.Weapons
             if (Time.time < _nextFireTime) return false;
 
             if (data.AmmoPerShot > 0 && (_inventory == null || !_inventory.TryConsumeAmmo(data.AmmoPerShot)))
-                return false; // plus de munitions : pas de tir (son "clic vide" à ajouter)
+            {
+                // Plus de munitions : clic vide, au rythme de l'arme pour ne pas le répéter à chaque image
+                _nextFireTime = Time.time + Mathf.Max(data.FireInterval, 0.25f);
+                PlaySound(data.EmptySound);
+                return false;
+            }
 
             _nextFireTime = Time.time + data.FireInterval;
             Fire();
@@ -99,13 +105,25 @@ namespace ChaosTower.Weapons
                 Debug.DrawLine(aimOrigin.position, end, hitSomething ? Color.red : Color.yellow, 0.5f);
         }
 
+        /// <summary>Joue un son du joueur (2D) avec une légère variation de hauteur, pour éviter la répétition (TDD).</summary>
+        protected void PlaySound(AudioClip clip)
+        {
+            if (audioSource == null || clip == null) return;
+            audioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
+            audioSource.PlayOneShot(clip);
+        }
+
+        /// <summary>Joue un des sons d'impact de l'arme, choisi au hasard.</summary>
+        protected void PlayImpactSound()
+        {
+            AudioClip[] clips = data.ImpactSounds;
+            if (clips != null && clips.Length > 0)
+                PlaySound(clips[UnityEngine.Random.Range(0, clips.Length)]);
+        }
+
         private void PlayFeedback()
         {
-            if (audioSource != null && data.FireSound != null)
-            {
-                audioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f); // évite la répétition
-                audioSource.PlayOneShot(data.FireSound);
-            }
+            PlaySound(data.FireSound);
 
             if (muzzleFlash != null && data.AmmoPerShot > 0)
             {

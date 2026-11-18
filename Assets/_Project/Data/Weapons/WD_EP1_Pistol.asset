@@ -21,5 +21,7 @@ MonoBehaviour:
   range: 40
   ammoPerShot: 1
   noiseRadius: 20
-  fireSound: {fileID: 0}
+  fireSound: {fileID: 8300000, guid: 3b8de14786d44e04b56589be7c341eed, type: 3}
+  emptySound: {fileID: 8300000, guid: ccfc391cfb074e67a23118f17afce8f1, type: 3}
+  impactSounds: []
   viewSprites: []

@@ -3,7 +3,7 @@
 // Autrice : SD — créé le 03/11/2026
 // Rôle : réglages d'une arme (un fichier .asset par arme et par
 //        univers), modifiables par les game designers sans code
-// Modifs :
+// Modifs : 18/11/2026 SD — sons d'arme vide et d'impact
 // ------------------------------------------------------------
 using UnityEngine;
 
@@ -38,6 +38,10 @@ namespace ChaosTower.Weapons
 
         [Header("Retours")]
         [SerializeField] private AudioClip fireSound;
+        [Tooltip("Clic quand on tire sans munitions (armes à feu)")]
+        [SerializeField] private AudioClip emptySound;
+        [Tooltip("Joués au hasard quand le coup touche quelque chose (corps à corps)")]
+        [SerializeField] private AudioClip[] impactSounds;
         [Tooltip("Sprites de l'arme en main : [0] = repos, puis l'animation de tir")]
         [SerializeField] private Sprite[] viewSprites;
 
@@ -51,6 +55,8 @@ namespace ChaosTower.Weapons
         public int AmmoPerShot => ammoPerShot;
         public float NoiseRadius => noiseRadius;
         public AudioClip FireSound => fireSound;
+        public AudioClip EmptySound => emptySound;
+        public AudioClip[] ImpactSounds => impactSounds;
         public Sprite[] ViewSprites => viewSprites;
 
         /// <summary>Dégâts d'un tir à une distance donnée : baisse linéaire avec la distance, puis variation aléatoire.</summary>

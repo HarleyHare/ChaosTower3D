@@ -3,7 +3,7 @@
 // Autrice : SD — créé le 03/11/2026
 // Rôle : arme de corps à corps (couteau, dent de basilic, sabre
 //        laser) : coup court, sans munitions
-// Modifs :
+// Modifs : 18/11/2026 SD — son d'impact quand le coup touche
 // ------------------------------------------------------------
 using UnityEngine;
 
@@ -22,6 +22,7 @@ namespace ChaosTower.Weapons
             if (Physics.SphereCast(ray, hitRadius, out RaycastHit hit, data.Range, hitMask, QueryTriggerInteraction.Ignore))
             {
                 ApplyHit(hit);
+                PlayImpactSound();
                 DrawDebugRay(hit.point, true);
             }
             else

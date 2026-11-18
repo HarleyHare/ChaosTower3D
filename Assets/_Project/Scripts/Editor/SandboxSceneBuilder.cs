@@ -7,6 +7,7 @@
 // Modifs : 03/11/2026 SD — sol en bloc épais, joueur posé à 0,1 m
 //          16/11/2026 SD — ajoute PlayerHealth et ses touches de test
 //          16/11/2026 SD — ajoute la potion (+ menu pour une scène existante)
+//          18/11/2026 SD — menu pour brancher les sons de test
 // ------------------------------------------------------------
 using ChaosTower.Player;
 using ChaosTower.Powers;
@@ -24,6 +25,7 @@ namespace ChaosTower.EditorTools
         private const string ControlsPath = "Assets/_Project/Data/ChaosTowerControls.inputactions";
         private const string WeaponDataFolder = "Assets/_Project/Data/Weapons";
         private const string PowerDataFolder = "Assets/_Project/Data/Powers";
+        private const string SfxFolder = "Assets/_Project/Audio/SFX";
         private const string MaterialFolder = "Assets/_Project/Art/Materials";
         private const float Cell = 2f;      // une case = 2 m (TDD)
         private const float WallHeight = 3f;
@@ -67,6 +69,7 @@ namespace ChaosTower.EditorTools
             Material floorMat = GetOrCreateMaterial("MAT_Sandbox_Floor", new Color(0.3f, 0.3f, 0.3f));
             Vector3 spawn = BuildLevel(wallMat, floorMat);
             CreatePlayer(spawn, controls);
+            WireTestSounds();
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             Debug.Log($"[Sandbox] Scène créée : {ScenePath}. Appuie sur Play pour tester.");
@@ -99,6 +102,7 @@ namespace ChaosTower.EditorTools
             Material floorMat = GetOrCreateMaterial("MAT_Sandbox_Floor", new Color(0.3f, 0.3f, 0.3f));
             Vector3 spawn = BuildLevel(wallMat, floorMat);
             CreatePlayer(spawn, controls);
+            WireTestSounds();
 
             EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
             Debug.Log("[Sandbox] Terrain de test ajouté. Appuie sur Play pour tester.");
@@ -255,6 +259,57 @@ namespace ChaosTower.EditorTools
             var hud = player.AddComponent<DebugHUD>();
             Set(hud, "inventory", inventory);
             Set(hud, "weapons", manager);
+        }
+
+        [MenuItem("ChaosTower/Brancher les sons de test (armes, joueur, cibles)")]
+        public static void WireTestSounds()
+        {
+            AudioClip Clip(string name) => AssetDatabase.LoadAssetAtPath<AudioClip>($"{SfxFolder}/{name}.wav");
+            AudioClip[] Clips(string prefix, int count)
+            {
+                var list = new AudioClip[count];
+                for (int i = 0; i < count; i++) list[i] = Clip($"{prefix}{i + 1}");
+                return list;
+            }
+            void SetClip(Object target, string field, AudioClip clip)
+            {
+                var so = new SerializedObject(target);
+                so.FindProperty(field).objectReferenceValue = clip;
+                so.ApplyModifiedPropertiesWithoutUndo();
+            }
+            void SetClips(Object target, string field, AudioClip[] clips)
+            {
+                var so = new SerializedObject(target);
+                var prop = so.FindProperty(field);
+                prop.arraySize = clips.Length;
+                for (int i = 0; i < clips.Length; i++) prop.GetArrayElementAtIndex(i).objectReferenceValue = clips[i];
+                so.ApplyModifiedPropertiesWithoutUndo();
+            }
+
+            // Réglages des armes (fichiers .asset partagés par toutes les scènes)
+            var pistol = AssetDatabase.LoadAssetAtPath<WeaponData>($"{WeaponDataFolder}/WD_EP1_Pistol.asset");
+            var machineGun = AssetDatabase.LoadAssetAtPath<WeaponData>($"{WeaponDataFolder}/WD_EP1_MachineGun.asset");
+            var knife = AssetDatabase.LoadAssetAtPath<WeaponData>($"{WeaponDataFolder}/WD_EP1_Knife.asset");
+            if (pistol != null) { SetClip(pistol, "fireSound", Clip("SFX_Pistol_Shot")); SetClip(pistol, "emptySound", Clip("SFX_Weapon_Empty")); EditorUtility.SetDirty(pistol); }
+            if (machineGun != null) { SetClip(machineGun, "fireSound", Clip("SFX_MachineGun_Shot")); SetClip(machineGun, "emptySound", Clip("SFX_Weapon_Empty")); EditorUtility.SetDirty(machineGun); }
+            if (knife != null) { SetClip(knife, "fireSound", Clip("SFX_Knife_Swing")); SetClips(knife, "impactSounds", Clips("SFX_Knife_Hit_", 3)); EditorUtility.SetDirty(knife); }
+            AssetDatabase.SaveAssets();
+
+            // Joueur et cibles de la scène ouverte
+            int players = 0, targets = 0;
+            foreach (var health in Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None))
+            {
+                SetClip(health, "hurtSound", Clip("SFX_Player_Hurt"));
+                players++;
+            }
+            foreach (var dummy in Object.FindObjectsByType<DummyTarget>(FindObjectsSortMode.None))
+            {
+                SetClips(dummy, "hurtSounds", new[] { Clip("SFX_EP1_Guard_Hurt") });
+                SetClips(dummy, "deathSounds", Clips("SFX_EP1_Guard_Death_", 8));
+                targets++;
+            }
+            EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            Debug.Log($"[Sandbox] Sons branchés : 3 armes, {players} joueur(s), {targets} cible(s). Enregistre la scène (Ctrl + S).");
         }
 
         [MenuItem("ChaosTower/Ajouter la potion au joueur de la scène ouverte")]

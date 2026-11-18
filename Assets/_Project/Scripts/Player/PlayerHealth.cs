@@ -3,7 +3,7 @@
 // Autrice : SD — créé le 16/11/2026
 // Rôle : points de vie du joueur (100 max) : dégâts reçus,
 //        soins, invincibilité de test, mort
-// Modifs :
+// Modifs : 18/11/2026 SD — son de blessure
 // ------------------------------------------------------------
 using System;
 using ChaosTower.Weapons;
@@ -32,6 +32,12 @@ namespace ChaosTower.Player
         [Tooltip("Scripts désactivés à la mort (déplacement, armes) pour figer le joueur")]
         [SerializeField] private Behaviour[] disableOnDeath;
 
+        [Header("Sons")]
+        [Tooltip("Joué à chaque blessure (SFX_Player_Hurt)")]
+        [SerializeField] private AudioClip hurtSound;
+        [Tooltip("Source audio du joueur (son 2D). Trouvée automatiquement si vide.")]
+        [SerializeField] private AudioSource audioSource;
+
         [Header("Test")]
         [Tooltip("Le joueur ne perd plus de PV (menu de débogage)")]
         [SerializeField] private bool invincible;
@@ -53,6 +59,7 @@ namespace ChaosTower.Player
         private void Awake()
         {
             _health = maxHealth;
+            if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
             // Par défaut, on fige le déplacement et les armes à la mort
             if (disableOnDeath == null || disableOnDeath.Length == 0)
@@ -71,6 +78,7 @@ namespace ChaosTower.Player
 
             float damage = amount * damageMultiplier;
             _health = Mathf.Max(_health - damage, 0f);
+            if (audioSource != null && hurtSound != null) audioSource.PlayOneShot(hurtSound);
             Damaged?.Invoke(damage, from);
             HealthChanged?.Invoke(_health, maxHealth);
 
